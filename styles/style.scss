@@ -1,0 +1,211 @@
+@import './colors';
+@import './mixins';
+@import './varibles';
+@import './borders';
+
+* {
+    margin: $marginDefault;
+    padding: $paddingDefault;
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* NAVIGATION SCSS */
+
+#nav_wrapper {
+    background-color: $colorBlack;
+    /************************/
+    .nav_wrapper_outer {
+        @include flexCenter(row);
+        margin: $marginDefault $margin10px * 10;
+        /******************/
+        .nav_wrapper_icon {
+            width: $width;
+            padding: $padding10px;
+            text-align: $textCenter;
+            border-left: $borderLeft $colorGrey;
+            border-right: $borderRight $colorGrey;
+            &:hover {
+                background-color: $colorRed;
+                border-left: $borderLeft $colorYellow;
+                //border-top: $borderTop $colorYellow;
+                cursor: $pointer;
+            }
+            /**************************/
+            a {
+                color: $colorWhite;
+                text-decoration: $textDecorationNone;
+            }
+        }
+    }
+}
+/****************************/
+/* WELCOME SCSS */
+
+#landing_page_wrapper {
+    @include flexCenter(column);
+    background-color: $colorGrey;
+    height: $heightVH - 3.9vh;
+    /*****************/
+    .welcome {
+        margin-bottom: $margin10px * 10;
+        /*************/
+        h1 {
+            color: $colorWhite;
+            font-size: $fontSizeRem + 3;
+        }
+    } 
+    /******************/
+    div .my_img {
+        border-radius: $borderRadius;
+    }
+    /*********************/
+    .name_proffesion {
+        @include flexCenter(column);
+        margin-top: $margin10px * 10;
+        h1 {
+            color: $colorWhite;
+            font-size: $fontSizeRem + 3;
+        }
+        h2 {
+            font-size: $fontSizeRem + 2;
+            color: $colorWhite;
+        }
+    }
+}
+/*******************************/
+/* ABOUT MYSELF SCSS */
+
+.about_myself {
+    @include flexCenter(column);
+    margin: $margin10px * 10 $margin10px * 50;
+    text-align: $textCenter;
+    /*************/
+    h2 {
+        font-size: $fontSizeRem + 2;
+        color: $colorBlack;
+        margin-bottom: $margin10px;
+    }
+    /***************/
+    p {
+        font-size: $fontSizePX + 5;
+        line-height: $lineHeight + 0.4;
+    }
+}
+/**************************/
+/* EDUCATION AND GOALS SCSS */
+
+.education_goals_wrapper {
+    @include FlexSpaceAround();
+    margin: $margin10px * 5 $margin10px * 15;
+    /***************/
+    .education_wrapper {
+        margin-left: $margin10px * 10;
+        /********************/
+        .list_wrapper {
+            list-style: $listStyleSquare;
+            /********************/
+            h2 {
+                margin-bottom: $margin10px * 5;
+                margin-top: $margin10px * 2;
+                text-decoration: underline;
+            }
+            /**********************/
+            li {
+                padding: $padding10px 0;
+                /*****************/
+                h4 {
+                    color: $colorBlack;
+                    /******************/
+                    a {
+                        color: $colorBlue;
+                        text-decoration: $textDecorationNone;
+                    }
+                    /********************/
+                }
+            }
+        }
+    }
+}
+
+
+.goals_wrapper {
+    width: $width - 50%;
+    margin-left: $margin10px * 10;
+    /****************/
+    h2 {
+        margin-bottom: $margin10px * 5;
+        margin-top: $margin10px * 2;
+    }
+    /******************/
+    p {
+        font-size: $fontSizePX;
+        line-height: $lineHeight + 1;
+        width: $width - 25%;
+    }
+    /*****************/
+}
+/**************************/
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:1600px) {
+    .about_myself {
+        margin: $margin10px * 10 $margin10px * 30;
+    }
+
+    .education_goals_wrapper {
+        margin: $margin10px * 5 $margin10px * 5;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .about_myself {
+        margin: $margin10px * 10 $margin10px * 10;
+    }
+
+    .goals_wrapper {
+        width: $width - 25%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .education_goals_wrapper {
+        @include flexCenter(column);
+    }
+
+    .goals_wrapper {
+        @include flexCenter(column);
+        width: $width;
+        p {
+            text-align: $textCenter;
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    #landing_page_wrapper {
+        text-align: $textCenter;
+    }
+
+    .about_myself {
+        margin: $margin10px * 10 $margin10px;
+    }
+
+    .education_goals_wrapper {
+        margin: $margin10px * 5;
+    }
+
+    .education_wrapper {
+        margin-left: $margin10px !important;
+        h2 {
+            text-align: $textCenter;
+        }
+    }
+
+    .goals_wrapper {
+        margin-left: $margin10px;
+        p {
+            width: $width;
+        }
+    }
+}

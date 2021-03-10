@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* NAVIGATION SCSS */
+#nav_wrapper {
+  background-color: black;
+  /************************/
+}
+
+#nav_wrapper .nav_wrapper_outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 100px;
+  /******************/
+}
+
+#nav_wrapper .nav_wrapper_outer .nav_wrapper_icon {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-left: solid 1px grey;
+  border-right: solid 1px grey;
+  /**************************/
+}
+
+#nav_wrapper .nav_wrapper_outer .nav_wrapper_icon:hover {
+  background-color: red;
+  border-left: solid 1px yellow;
+  cursor: pointer;
+}
+
+#nav_wrapper .nav_wrapper_outer .nav_wrapper_icon a {
+  color: white;
+  text-decoration: none;
+}
+
+/****************************/
+/* WELCOME SCSS */
+#landing_page_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: grey;
+  height: 96.1vh;
+  /*****************/
+  /******************/
+  /*********************/
+}
+
+#landing_page_wrapper .welcome {
+  margin-bottom: 100px;
+  /*************/
+}
+
+#landing_page_wrapper .welcome h1 {
+  color: white;
+  font-size: 4rem;
+}
+
+#landing_page_wrapper div .my_img {
+  border-radius: 50%;
+}
+
+#landing_page_wrapper .name_proffesion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 100px;
+}
+
+#landing_page_wrapper .name_proffesion h1 {
+  color: white;
+  font-size: 4rem;
+}
+
+#landing_page_wrapper .name_proffesion h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+/*******************************/
+/* ABOUT MYSELF SCSS */
+.about_myself {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 100px 500px;
+  text-align: center;
+  /*************/
+  /***************/
+}
+
+.about_myself h2 {
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.about_myself p {
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+/**************************/
+/* EDUCATION AND GOALS SCSS */
+.education_goals_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 50px 150px;
+  /***************/
+}
+
+.education_goals_wrapper .education_wrapper {
+  margin-left: 100px;
+  /********************/
+}
+
+.education_goals_wrapper .education_wrapper .list_wrapper {
+  list-style: square;
+  /********************/
+  /**********************/
+}
+
+.education_goals_wrapper .education_wrapper .list_wrapper h2 {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+.education_goals_wrapper .education_wrapper .list_wrapper li {
+  padding: 10px 0;
+  /*****************/
+}
+
+.education_goals_wrapper .education_wrapper .list_wrapper li h4 {
+  color: black;
+  /******************/
+  /********************/
+}
+
+.education_goals_wrapper .education_wrapper .list_wrapper li h4 a {
+  color: #1215cc;
+  text-decoration: none;
+}
+
+.goals_wrapper {
+  width: 50%;
+  margin-left: 100px;
+  /****************/
+  /******************/
+  /*****************/
+}
+
+.goals_wrapper h2 {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.goals_wrapper p {
+  font-size: 20px;
+  line-height: 2;
+  width: 75%;
+}
+
+/**************************/
+/* MEDIA QUERIES */
+@media screen and (max-width: 1600px) {
+  .about_myself {
+    margin: 100px 300px;
+  }
+  .education_goals_wrapper {
+    margin: 50px 50px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .about_myself {
+    margin: 100px 100px;
+  }
+  .goals_wrapper {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .education_goals_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .goals_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .goals_wrapper p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #landing_page_wrapper {
+    text-align: center;
+  }
+  .about_myself {
+    margin: 100px 10px;
+  }
+  .education_goals_wrapper {
+    margin: 50px;
+  }
+  .education_wrapper {
+    margin-left: 10px !important;
+  }
+  .education_wrapper h2 {
+    text-align: center;
+  }
+  .goals_wrapper {
+    margin-left: 10px;
+  }
+  .goals_wrapper p {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
